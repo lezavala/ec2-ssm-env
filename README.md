@@ -12,15 +12,16 @@ sh import-params.sh -p /NAMESPACE/ENV/ -r us-west-1
 
 **Note**
 The above will look for parameters stored under the path: /NAMESPACE/ENV/
+
 IE
-/NAMESPACE/ENV/APP_NAME
-/NAMESPACE/ENV/APP_KEY
-/NAMESPACE/ENV/DYNAMODB_HOST
+- /NAMESPACE/ENV/APP_NAME
+- /NAMESPACE/ENV/APP_KEY
+- /NAMESPACE/ENV/DYNAMODB_HOST
 
 It will then set then envirnoment as:
-APP_NAME=value
-APP_KEY=value
-DYNAMODB_HOST=value
+- APP_NAME=value
+- APP_KEY=value
+- DYNAMODB_HOST=value
 
 ## Acknowledgement
 - berpj
