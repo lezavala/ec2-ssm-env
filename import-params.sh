@@ -11,7 +11,7 @@ esac
 done
 
 # Functions
-AWS="/usr/local/bin/aws"
+AWS=`which aws`
 
 get_parameter_store_tags() {
     echo $($AWS ssm get-parameters-by-path --with-decryption --path $1  --region $2)
@@ -20,7 +20,7 @@ get_parameter_store_tags() {
 params_to_env () {
     params=$1
 
-    # If .Ta1gs does not exist we assume ssm Parameteres object.
+    # If .Tags does not exist we assume ssm Parameteres object.
     SELECTOR="Name"
 
     for key in $(echo $params | /usr/bin/jq -r ".[][].${SELECTOR}"); do
